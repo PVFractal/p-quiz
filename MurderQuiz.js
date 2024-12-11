@@ -1,9 +1,9 @@
 
 
-class MurderQuiz {
+export default class MurderQuiz {
   constructor() {
     console.log("Initiated");
-    
+
     this.questionIndex = 0;
 
     this.poison = 0;
@@ -60,5 +60,3 @@ class MurderQuiz {
 
 
 }
-
-export default MurderQuiz;

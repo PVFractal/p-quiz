@@ -1,12 +1,12 @@
 
-// import MurderQuiz from "./MurderQuiz"
+import MurderQuiz from "./MurderQuiz";
 
 
 
 console.log("Loaded");
 
 
-// let newQuiz = new MurderQuiz();
+let newQuiz = new MurderQuiz();
 
 // References
 let choiceField = document.getElementById("choice-set");
