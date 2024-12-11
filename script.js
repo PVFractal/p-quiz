@@ -1,10 +1,6 @@
-
-import MurderQuiz from "./MurderQuiz";
-
-
+import MurderQuiz from "./murderquiz";
 
 console.log("Loaded");
-
 
 let newQuiz = new MurderQuiz();
 
