@@ -2,7 +2,7 @@
 
 export default class MurderQuiz {
   constructor() {
-    console.log("Initiated");
+    console.log("Initiated here");
 
     this.questionIndex = 0;
 
