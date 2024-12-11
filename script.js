@@ -1,4 +1,4 @@
-import MurderQuiz from "./murderquiz";
+import MurderQuiz from "./murderquiz.js";
 
 console.log("Loaded");
 
