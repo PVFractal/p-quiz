@@ -69,7 +69,3 @@ function enterData(data) {
   document.getElementById("mainBody").removeChild(choiceField);
   title.textContent = "Thanks for your answer!";
 }
-  
-
-
-
