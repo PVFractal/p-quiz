@@ -9,11 +9,11 @@ console.log("Loaded");
 // let newQuiz = new MurderQuiz();
 
 // References
-choiceField = document.getElementById("choice-set");
-title = document.getElementById("title");
-textField = document.getElementById("text-area");
-elseBox = document.getElementById("else-box");
-enterButton = document.getElementById("enter-button")
+let choiceField = document.getElementById("choice-set");
+let title = document.getElementById("title");
+let textField = document.getElementById("text-area");
+let elseBox = document.getElementById("else-box");
+let enterButton = document.getElementById("enter-button")
 
 enterButton.style.visibility = "hidden";
 
