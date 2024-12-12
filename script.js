@@ -7,7 +7,7 @@ let title = document.getElementById("title");
 // let textField = document.getElementById("text-area");
 // let elseBox = document.getElementById("else-box");
 let enterButton = document.getElementById("enter-button")
-enterButton.style.visibility = "hidden";
+
 
 let newQuiz = new MurderQuiz();
 
@@ -19,6 +19,8 @@ function loadQuestions() {
   for (var i = 0; i < originalLength - 1; i++) {
     choiceField.removeChild(choiceField.firstElementChild);
   }
+
+  enterButton.style.visibility = "hidden";
 
 
   let page = newQuiz.nextQuestion();
@@ -48,7 +50,7 @@ function loadQuestions() {
       newArea.id = "else-box";
 
       newArea.addEventListener("change", function() {
-        if (newArea.value.length > 1) {
+        if (newArea.value.length > 0) {
           enterButton.style.visibility = "";
         } else {
           enterButton.style.visibility = "hidden";
