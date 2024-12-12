@@ -1,9 +1,5 @@
 import MurderQuiz from "./murderquiz.js";
 
-console.log("Loaded");
-
-let newQuiz = new MurderQuiz();
-
 // References
 let choiceField = document.getElementById("choice-set");
 let title = document.getElementById("title");
@@ -13,18 +9,30 @@ let enterButton = document.getElementById("enter-button")
 
 enterButton.style.visibility = "hidden";
 
-// Choices
-let choiceList = ["Money", "True Love", "Power"]
-choiceList.forEach(choice => {
-  let newButton = document.createElement("button");
-  newButton.textContent = choice;
-  newButton.className = "choice";
-  newButton.addEventListener("click", function() {
-    enterData(choice);
+
+
+let newQuiz = new MurderQuiz();
+
+function loadQuestions() {
+  let page = newQuiz.nextQuestion();
+
+
+  page.questions.forEach(choice => {
+    let newButton = document.createElement("button");
+    newButton.textContent = choice.text;
+    newButton.className = "choice";
+    newButton.addEventListener("click", function() {
+      choice.action();
+    });
+    choiceField.insertBefore(newButton, textField);
+    console.log(choice.text);
   });
-  choiceField.insertBefore(newButton, textField);
-  console.log(choice);
-});
+
+}
+
+
+loadQuestions();
+
 
 
 elseBox.addEventListener("change", function() {
