@@ -27,7 +27,7 @@ function loadQuestions() {
       newButton.addEventListener("click", function() {
         choice.action();
       });
-      choiceField.insertBefore(enterButton, newButton);
+      choiceField.insertBefore(newButton, enterButton);
     } else if (choice.type == QuestionType.OTHER) {
       let newDiv = document.createElement("div");
       newDiv.className = "choice";
@@ -51,7 +51,7 @@ function loadQuestions() {
       newDiv.appendChild(newLabel);
       newDiv.appendChild(newArea);
 
-      choiceField.insertBefore(enterButton, newDiv);
+      choiceField.insertBefore(newDiv, enterButton);
     }
 
     elseId += 1;
