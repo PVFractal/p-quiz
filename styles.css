@@ -20,6 +20,7 @@ body {
   width: 200px;
   margin: 7px 0px;
   box-shadow: 2px 2px 5px black;
+  position: relative;
 }
 
 .choice:hover {
