@@ -29,7 +29,7 @@ function loadQuestions() {
   // checking to see if we are at the end
   if (page == undefined) {
     let data = newQuiz.getData();
-    title = "Congratulations!"
+    title.textContent = "Congratulations!"
 
     let newText = document.createElement("p");
     newText.textContent = "Your murder method is: " + data.method;
