@@ -16,6 +16,8 @@ let newQuiz = new MurderQuiz();
 function loadQuestions() {
   let page = newQuiz.nextQuestion();
 
+  title = page.title;
+
 
   page.questions.forEach(choice => {
     let newButton = document.createElement("button");

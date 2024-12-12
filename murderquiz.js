@@ -20,6 +20,7 @@ export default class MurderQuiz {
         text: "Slowly",
         img: "",
         action: () => {
+          console.log("Selected");
           this.poison += 1;
         }
       },
