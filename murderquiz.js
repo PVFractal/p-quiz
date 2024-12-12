@@ -1,4 +1,4 @@
-
+import QuestionType from "./questiontype.js";
 
 export default class MurderQuiz {
   constructor() {
@@ -16,6 +16,7 @@ export default class MurderQuiz {
     title: "How do you generally prefer to enjoy things?",
     questions: [
       {
+        type: QuestionType.REGULAR,
         text: "Slowly",
         img: "",
         action: () => {
@@ -23,6 +24,7 @@ export default class MurderQuiz {
         }
       },
       {
+        type: QuestionType.REGULAR,
         text: "Quickly",
         img: "",
         action: () => {
@@ -35,6 +37,7 @@ export default class MurderQuiz {
     title: "Second Question",
     questions: [
       {
+        type: QuestionType.REGULAR,
         text: "One",
         img: "",
         action: () => {
@@ -42,6 +45,7 @@ export default class MurderQuiz {
         }
       },
       {
+        type: QuestionType.OTHER,
         text: "Two",
         img: "",
         action: () => {
