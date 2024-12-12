@@ -43,8 +43,6 @@ export default class MurderQuiz {
         action: () => {
           this.methods["poison"] += 1;
           this.methods["strangle"] += 1;
-
-          console.log(this.methods);
         }
       },
       {
@@ -72,6 +70,8 @@ export default class MurderQuiz {
           this.methods["strangle"] += 1;
           this.methods["axe"] += 1;
           this.methods["sword"] += 1;
+
+          console.log(this.methods);
         }
       },
       {
