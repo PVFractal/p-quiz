@@ -26,6 +26,7 @@ function loadQuestions() {
       newButton.className = "choice";
       newButton.addEventListener("click", function() {
         choice.action();
+        loadQuestions();
       });
       choiceField.insertBefore(newButton, enterButton);
     } else if (choice.type == QuestionType.OTHER) {
