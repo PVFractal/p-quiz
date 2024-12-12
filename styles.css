@@ -44,6 +44,7 @@ input {
 button {
   height: 30px;
   font-size: large;
+  appearance: none;
 }
 p {
   font-size: 20px;
