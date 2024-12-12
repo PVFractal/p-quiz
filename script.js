@@ -53,8 +53,6 @@ function loadQuestions() {
 
       choiceField.insertBefore(newDiv, enterButton);
     }
-
-    elseId += 1;
   });
 
 }
