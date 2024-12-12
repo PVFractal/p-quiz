@@ -42,7 +42,7 @@ input {
   border: 2px solid green;
 }
 button {
-  height: 30px;
+  min-height: 30px;
   font-size: large;
   appearance: none;
 }
