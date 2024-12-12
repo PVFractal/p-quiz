@@ -27,8 +27,6 @@ function loadQuestions() {
 
   page.questions.forEach(choice => {
 
-    console.log(choice.type);
-
     if (choice.type == QuestionType.REGULAR) {
       let newButton = document.createElement("button");
       newButton.textContent = choice.text;
@@ -44,13 +42,12 @@ function loadQuestions() {
 
       let newLabel = document.createElement("label");
       newLabel.htmlFor = "else-box";
+      newLabel.text = choice.text;
 
       let newArea = document.createElement("textarea");
       newArea.id = "else-box";
 
-
       newArea.addEventListener("change", function() {
-        console.log(newArea.value);
         if (newArea.value.length > 1) {
           enterButton.style.visibility = "";
         } else {
@@ -71,7 +68,7 @@ loadQuestions();
 
 
 enterButton.addEventListener("click", function() {
-  val = document.getElementById("else-box").value;
+  let val = document.getElementById("else-box").value;
   console.log(val);
   loadQuestions();
 });
