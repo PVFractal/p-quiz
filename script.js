@@ -14,6 +14,15 @@ enterButton.style.visibility = "hidden";
 let newQuiz = new MurderQuiz();
 
 function loadQuestions() {
+  // Deleting the previous questions
+
+  let originalLength = choiceField.children.length;
+
+  for (var i = 0; i < originalLength - 1; i++) {
+    choiceField.removeChild(choiceField.firstElementChild);
+  }
+
+
   let page = newQuiz.nextQuestion();
 
   title = page.title;
