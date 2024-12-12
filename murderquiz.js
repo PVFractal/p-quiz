@@ -57,6 +57,14 @@ export default class MurderQuiz {
   nextQuestion() {
     return this.quiz[this.questionIndex++];
   }
+
+  getData() {
+    let ourMethod = "ME";
+
+    return {
+      method: ourMethod
+    }
+  }
   
 
 

@@ -12,8 +12,9 @@ let enterButton = document.getElementById("enter-button")
 let newQuiz = new MurderQuiz();
 
 function loadQuestions() {
-  // Deleting the previous questions
+  
 
+  // Deleting the previous questions
   let originalLength = choiceField.children.length;
 
   for (var i = 0; i < originalLength - 1; i++) {
@@ -25,6 +26,16 @@ function loadQuestions() {
 
   let page = newQuiz.nextQuestion();
 
+  // checking to see if we are at the end
+  if (page == undefined) {
+    data = newQuiz.getData();
+    title = "Your murder method is: " + data.method;
+    enterData(data)
+    return;
+  }
+
+
+  // loading the title and questions
   title = page.title;
 
   page.questions.forEach(choice => {
@@ -77,16 +88,13 @@ enterButton.addEventListener("click", function() {
 
 
 function enterData(data) {
-  const formData = {
-    answer: data
-  };
   
   fetch('https://fabform.io/f/WgtpQaL', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(formData)
+    body: JSON.stringify(data)
   })
   .then(response => response.json())
   .then(data => {
