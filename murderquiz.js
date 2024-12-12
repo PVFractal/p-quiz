@@ -2,10 +2,7 @@ import QuestionType from "./questiontype.js";
 
 export default class MurderQuiz {
   constructor() {
-    console.log("Initiated here");
-
     this.questionIndex = 0;
-
     this.poison = 0;
     this.hammer = 0;
   }
@@ -20,7 +17,6 @@ export default class MurderQuiz {
         text: "Slowly",
         img: "",
         action: () => {
-          console.log("Selected");
           this.poison += 1;
         }
       },

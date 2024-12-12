@@ -1,12 +1,12 @@
 import MurderQuiz from "./murderquiz.js";
+import QuestionType from "./questiontype.js";
 
 // References
 let choiceField = document.getElementById("choice-set");
 let title = document.getElementById("title");
-let textField = document.getElementById("text-area");
-let elseBox = document.getElementById("else-box");
+// let textField = document.getElementById("text-area");
+// let elseBox = document.getElementById("else-box");
 let enterButton = document.getElementById("enter-button")
-
 enterButton.style.visibility = "hidden";
 
 
@@ -18,37 +18,54 @@ function loadQuestions() {
 
   title = page.title;
 
-
   page.questions.forEach(choice => {
-    let newButton = document.createElement("button");
-    newButton.textContent = choice.text;
-    newButton.className = "choice";
-    newButton.addEventListener("click", function() {
-      choice.action();
-    });
-    choiceField.insertBefore(newButton, textField);
-    console.log(choice.text);
+
+    if (choice.type == QuestionType.REGULAR) {
+      let newButton = document.createElement("button");
+      newButton.textContent = choice.text;
+      newButton.className = "choice";
+      newButton.addEventListener("click", function() {
+        choice.action();
+      });
+      choiceField.insertBefore(enterButton, newButton);
+    } else if (choice.type == QuestionType.OTHER) {
+      let newDiv = document.createElement("div");
+      newDiv.className = "choice";
+
+      let newLabel = document.createElement("label");
+      newLabel.htmlFor = "else-box";
+
+      let newArea = document.createElement("textarea");
+      newArea.id = "else-box";
+
+
+      newArea.addEventListener("change", function() {
+        console.log(newArea.value);
+        if (newArea.value.length > 1) {
+          enterButton.style.visibility = "";
+        } else {
+          enterButton.style.visibility = "hidden";
+        }
+      });
+
+      newDiv.appendChild(newLabel);
+      newDiv.appendChild(newArea);
+
+      choiceField.insertBefore(enterButton, newDiv);
+    }
+
+    elseId += 1;
   });
 
 }
 
-
 loadQuestions();
 
 
-
-elseBox.addEventListener("change", function() {
-  console.log(elseBox.value);
-  if (elseBox.value.length > 1) {
-    enterButton.style.visibility = "";
-  } else {
-    enterButton.style.visibility = "hidden";
-  }
-});
-
 enterButton.addEventListener("click", function() {
-  val = elseBox.value;
-  enterData(val);
+  val = document.getElementById("else-box").value;
+  console.log(val);
+  loadQuestions();
 });
 
 
