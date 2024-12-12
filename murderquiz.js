@@ -43,6 +43,8 @@ export default class MurderQuiz {
         action: () => {
           this.methods["poison"] += 1;
           this.methods["strangle"] += 1;
+
+          console.log(this.methods);
         }
       },
       {
@@ -470,8 +472,10 @@ export default class MurderQuiz {
 
     const sortedMap = new Map([...this.methods.entries()].sort((a, b) => b[1] - a[1]));
     console.log(sortedMap);
+
     const iterator = sortedMap.entries();
     const firstEntry = iterator.next();
+
     console.log(firstEntry);
 
     let ourMethod = "ME";
