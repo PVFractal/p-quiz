@@ -1,4 +1,5 @@
-export default class QuestionType {
-  REGULAR = "regular";
-  OTHER = "other";
-}
+export default QuestionType = {
+  REGULAR: "regular",
+  IMG: "img",
+  OTHER: "other",
+};
