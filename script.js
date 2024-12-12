@@ -32,7 +32,7 @@ function loadQuestions() {
     title = "Congratulations!"
 
     let newText = document.createElement("p");
-    newText = "Your murder method is: " + data.method;
+    newText.textContent = "Your murder method is: " + data.method;
     choiceField.insertBefore(newText, enterButton);
 
     enterData(data)
@@ -41,7 +41,7 @@ function loadQuestions() {
 
 
   // loading the title and questions
-  title = page.title;
+  title.textContent = page.title;
 
   page.questions.forEach(choice => {
 
