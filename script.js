@@ -28,7 +28,7 @@ function loadQuestions() {
 
   // checking to see if we are at the end
   if (page == undefined) {
-    data = newQuiz.getData();
+    let data = newQuiz.getData();
     title = "Your murder method is: " + data.method;
     enterData(data)
     return;
