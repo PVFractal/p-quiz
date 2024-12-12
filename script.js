@@ -32,7 +32,6 @@ function loadQuestions() {
     title.textContent = "Congratulations!"
 
     let newText = document.createElement("p");
-    newText.
     newText.textContent = "Your murder method is: " + data.method;
     choiceField.insertBefore(newText, enterButton);
 
