@@ -70,8 +70,6 @@ export default class MurderQuiz {
           this.methods["strangle"] += 1;
           this.methods["axe"] += 1;
           this.methods["sword"] += 1;
-
-          console.log(this.methods);
         }
       },
       {
@@ -469,6 +467,8 @@ export default class MurderQuiz {
   }
 
   getData() {
+
+    console.log(this.methods);
 
     const sortedMap = new Map([...this.methods.entries()].sort((a, b) => b[1] - a[1]));
     console.log(sortedMap);
