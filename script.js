@@ -4,16 +4,7 @@ import QuestionType from "./questiontype.js";
 // References
 let choiceField = document.getElementById("choice-set");
 let title = document.getElementById("title");
-// let textField = document.getElementById("text-area");
-// let elseBox = document.getElementById("else-box");
 let enterButton = document.getElementById("enter-button")
-
-let testMap = new Map();
-testMap["bork"] = 0;
-testMap["bork"] += 1;
-testMap["bork"] += 1;
-
-console.log(testMap["bork"]);
 
 let newQuiz = new MurderQuiz();
 
