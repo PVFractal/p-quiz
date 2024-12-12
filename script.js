@@ -8,6 +8,12 @@ let title = document.getElementById("title");
 // let elseBox = document.getElementById("else-box");
 let enterButton = document.getElementById("enter-button")
 
+let testMap = new Map();
+testMap["bork"] = 0;
+testMap["bork"] += 1;
+testMap["bork"] += 1;
+
+console.log(testMap["bork"]);
 
 let newQuiz = new MurderQuiz();
 
@@ -108,7 +114,7 @@ loadQuestions();
 
 enterButton.addEventListener("click", function() {
   let val = document.getElementById("else-box").value;
-  console.log(val);
+  newQuiz.takeOther(val);
   loadQuestions();
 });
 

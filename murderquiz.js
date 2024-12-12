@@ -3,12 +3,36 @@ import QuestionType from "./questiontype.js";
 export default class MurderQuiz {
   constructor() {
     this.questionIndex = 0;
-    this.poison = 0;
-    this.hammer = 0;
+    this.name = "";
+
+
+
+    this.methods = new Map();
+
+    this.methods["poison"] = 0;
+    this.methods["axe"] = 0;
+    this.methods["dynamite"] = 0;
+    this.methods["sword"] = 0;
+    this.methods["knife"] = 0;
+    this.methods["gun"] = 0;
+    this.methods["strangle"] = 0;
+    
   }
 
 
   quiz = [
+  {
+    title: "Enter your name:",
+    questions: [
+      {
+        type: QuestionType.OTHER,
+        text: "Enter here",
+        img: "",
+        action: () => {
+        }
+      }
+    ]
+  },
   {
     title: "How do you generally prefer to enjoy things?",
     questions: [
@@ -17,7 +41,8 @@ export default class MurderQuiz {
         text: "Slowly",
         img: "",
         action: () => {
-          this.poison += 1;
+          this.methods["poison"] += 1;
+          this.methods["strangle"] += 1;
         }
       },
       {
@@ -25,17 +50,21 @@ export default class MurderQuiz {
         text: "Quickly",
         img: "",
         action: () => {
-          this.hammer += 1;
+          this.methods["axe"] += 1;
+          this.methods["dynamite"] += 1;
+          this.methods["sword"] += 1;
+          this.methods["knife"] += 1;
+          this.methods["gun"] += 1;
         }
       }
     ]
   },
   {
-    title: "Second Question",
+    title: "If you had to fire somebody, would you do it:",
     questions: [
       {
         type: QuestionType.REGULAR,
-        text: "One",
+        text: "In person",
         img: "",
         action: () => {
           this.poison += 1;
@@ -43,8 +72,8 @@ export default class MurderQuiz {
       },
       {
         type: QuestionType.IMG,
-        text: "Two",
-        img: "images/josh.png",
+        text: "By email",
+        img: "",
         action: () => {
           this.hammer += 1;
         }
@@ -64,6 +93,10 @@ export default class MurderQuiz {
     return {
       method: ourMethod
     }
+  }
+
+  takeOther(data) {
+    this.name = data;
   }
   
 
