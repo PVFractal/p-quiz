@@ -77,6 +77,27 @@ function loadQuestions() {
       newDiv.appendChild(newArea);
 
       choiceField.insertBefore(newDiv, enterButton);
+    } else if (choice.type == QuestionType.IMG) {
+      let newButton = document.createElement("div");
+      newButton.className = "choice";
+      newButton.addEventListener("click", function() {
+        choice.action();
+        loadQuestions();
+      });
+
+      let newImg = document.createElement("img");
+      newImg.src = choice.img;
+      newImg.alt = choice.img;
+
+      let newTxt = document.createElement("p");
+      newTxt.textContent = choice.text;
+      newTxt.className = "imgTxt";
+
+      newButton.appendChild(newImg);
+      newButton.appendChild(newTxt);
+
+
+      choiceField.insertBefore(newButton, enterButton);
     }
   });
 

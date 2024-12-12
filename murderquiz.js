@@ -42,9 +42,9 @@ export default class MurderQuiz {
         }
       },
       {
-        type: QuestionType.OTHER,
+        type: QuestionType.IMG,
         text: "Two",
-        img: "",
+        img: "images/josh.png",
         action: () => {
           this.hammer += 1;
         }
