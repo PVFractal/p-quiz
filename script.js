@@ -29,7 +29,12 @@ function loadQuestions() {
   // checking to see if we are at the end
   if (page == undefined) {
     let data = newQuiz.getData();
-    title = "Your murder method is: " + data.method;
+    title = "Congratulations!"
+
+    let newText = document.createElement("p");
+    newText = "Your murder method is: " + data.method;
+    choiceField.insertBefore(newText, enterButton);
+
     enterData(data)
     return;
   }
