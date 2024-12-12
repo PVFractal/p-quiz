@@ -9,8 +9,6 @@ let title = document.getElementById("title");
 let enterButton = document.getElementById("enter-button")
 enterButton.style.visibility = "hidden";
 
-
-
 let newQuiz = new MurderQuiz();
 
 function loadQuestions() {
@@ -28,6 +26,8 @@ function loadQuestions() {
   title = page.title;
 
   page.questions.forEach(choice => {
+
+    console.log(choice.type);
 
     if (choice.type == QuestionType.REGULAR) {
       let newButton = document.createElement("button");
