@@ -42,7 +42,7 @@ function loadQuestions() {
 
       let newLabel = document.createElement("label");
       newLabel.htmlFor = "else-box";
-      newLabel.text = choice.text;
+      newLabel.textContent = choice.text;
 
       let newArea = document.createElement("textarea");
       newArea.id = "else-box";
