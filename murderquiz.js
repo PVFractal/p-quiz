@@ -9,7 +9,7 @@ export default class MurderQuiz {
 
     this.methods = new Map();
 
-    this.methods["poison"] = 0;
+    this.methods.set("poison", 0);
     this.methods["axe"] = 0;
     this.methods["dynamite"] = 0;
     this.methods["sword"] = 0;
@@ -41,7 +41,7 @@ export default class MurderQuiz {
         text: "Slowly",
         img: "",
         action: () => {
-          this.methods["poison"] += 1;
+          this.this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
           this.methods["strangle"] += 1;
         }
       },
@@ -77,7 +77,7 @@ export default class MurderQuiz {
         text: "By email",
         img: "",
         action: () => {
-          this.methods["poison"] += 1;
+          this.this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
           this.methods["dynamite"] += 1;
           this.methods["knife"] += 1;
           this.methods["gun"] += 1;
@@ -102,7 +102,7 @@ export default class MurderQuiz {
         text: "No",
         img: "",
         action: () => {
-          this.methods["poison"] += 1;
+          this.this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
           this.methods["strangle"] += 1;
           this.methods["sword"] += 1;
           this.methods["knife"] += 1;
@@ -119,7 +119,7 @@ export default class MurderQuiz {
         text: "Cats",
         img: "",
         action: () => {
-          this.methods["poison"] += 1;
+          this.this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
           this.methods["strangle"] += 1;
           this.methods["knife"] += 1;
         }
@@ -213,7 +213,7 @@ export default class MurderQuiz {
         text: "No",
         img: "",
         action: () => {
-          this.methods["poison"] += 1;
+          this.this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
           this.methods["strangle"] += 1;
           this.methods["sword"] += 1;
           this.methods["knife"] += 1;
@@ -230,7 +230,7 @@ export default class MurderQuiz {
         text: "Getting it done",
         img: "",
         action: () => {
-          this.methods["poison"] += 1;
+          this.this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
           this.methods["strangle"] += 1;
           this.methods["knife"] += 1;
           this.methods["gun"] += 1;
@@ -276,7 +276,7 @@ export default class MurderQuiz {
         text: "Honor is worthless",
         img: "",
         action: () => {
-          this.methods["poison"] += 1;
+          this.this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
           this.methods["knife"] += 1;
         }
       }
@@ -290,7 +290,7 @@ export default class MurderQuiz {
         text: "Yes",
         img: "",
         action: () => {
-          this.methods["poison"] += 1;
+          this.this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
         }
       },
       {
@@ -334,7 +334,7 @@ export default class MurderQuiz {
         text: "Prefer the quiet",
         img: "",
         action: () => {
-          this.methods["poison"] += 1;
+          this.this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
           this.methods["strangle"] += 1;
           this.methods["knife"] += 1;
         }
@@ -360,7 +360,7 @@ export default class MurderQuiz {
         text: "Strategy",
         img: "",
         action: () => {
-          this.methods["poison"] += 1;
+          this.this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
           this.methods["gun"] += 1;
           this.methods["knife"] += 1;
         }
@@ -393,7 +393,7 @@ export default class MurderQuiz {
         text: "Would avoid fame if I could",
         img: "",
         action: () => {
-          this.methods["poison"] += 1;
+          this.this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
           this.methods["strangle"] += 1;
           this.methods["knife"] += 1;
         }
@@ -427,7 +427,7 @@ export default class MurderQuiz {
         text: "Generally avoid risk",
         img: "",
         action: () => {
-          this.methods["poison"] += 1;
+          this.this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
           this.methods["gun"] += 1;
         }
       }
@@ -451,7 +451,7 @@ export default class MurderQuiz {
         text: "Strength",
         img: "",
         action: () => {
-          this.methods["poison"] += 1;
+          this.this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
           this.methods["axe"] += 1;
           this.methods["dynamite"] += 1;
           this.methods["knife"] += 1;
@@ -471,6 +471,8 @@ export default class MurderQuiz {
     console.log(this.methods);
 
     let sortedMap = []
+
+    this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
 
     let iterator = this.methods.entries();
     console.log(iterator.next());
