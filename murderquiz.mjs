@@ -1,4 +1,4 @@
-import QuestionType from "./questiontype.js";
+import QuestionType from "./questiontype.mjs";
 
 export default class MurderQuiz {
   constructor() {
@@ -135,65 +135,6 @@ export default class MurderQuiz {
           this.methods.set("gun", (this.methods.get("gun") || 0) + 1);
         }
       }
-    ]
-  },
-  {
-    title: "Do you like Christmas gifts?",
-    questions: [
-      {
-        type: QuestionType.REGULAR,
-        text: "Yes",
-        img: "",
-        action: () => {
-        }
-      },
-      {
-        type: QuestionType.REGULAR,
-        text: "No",
-        img: "",
-        action: () => {
-        }
-      }
-    ]
-  },
-  {
-    title: "How much would you like a new car for Christmas?",
-    questions: [
-      {
-        type: QuestionType.REGULAR,
-        text: "That would be awesome!",
-        img: "",
-        action: () => {
-        }
-      },
-      {
-        type: QuestionType.REGULAR,
-        text: "It's an OK gift",
-        img: "",
-        action: () => {
-        }
-      },
-      {
-        type: QuestionType.REGULAR,
-        text: "No strong feelings either way",
-        img: "",
-        action: () => {
-        }
-      },
-      {
-        type: QuestionType.REGULAR,
-        text: "Not the ideal gift",
-        img: "",
-        action: () => {
-        }
-      },
-      {
-        type: QuestionType.REGULAR,
-        text: "An awful gift",
-        img: "",
-        action: () => {
-        }
-      },
     ]
   },
   {
@@ -468,22 +409,31 @@ export default class MurderQuiz {
 
   getData() {
 
-    console.log(this.methods);
+    // console.log(this.methods);
 
 
     const sortedMap = Array.from(this.methods).sort((a, b) => b[1] - a[1]);
-    console.log(sortedMap);
-    console.log(sortedMap[0]);
+    
+    let finalValue = sortedMap[0][0];
 
-    // const iterator = sortedMap.entries();
-    // const firstEntry = iterator.next();
+    let returnVal = "From the results of the survey, your preferred method of murder is: ";
+    if (finalValue == "poison") {
+      returnVal += "Poison! You're the kind of person to stay out of the action, if possible. You love the satisfaction of poisoning a bit of food, and hearing of your victim's death days later.";
+    }
+    if (finalValue == "axe") {
+      returnVal += "Axe murder! You have a fondness for tradition. You love inspiring terror, and you aren't afraid to cause a little chaos. You also probably like pineapple.";
+    }
+    if (finalValue == "axe") {
+      returnVal += "Dynamite! You're the kind of person who likes to put on a show. You go for complete victory, and probably walk away from explosions without looking back.";
+    }
+    if (finalValue == "sword") {
+      returnVal += "Killing with a sword! You probably like ";
+    }
 
-    // console.log(firstEntry);
-
-    let ourMethod = "ME";
+    return this.methods;
 
     return {
-      method: ourMethod
+      method: finalValue
     }
   }
 

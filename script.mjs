@@ -1,5 +1,5 @@
-import MurderQuiz from "./murderquiz.js";
-import QuestionType from "./questiontype.js";
+import MurderQuiz from "./murderquiz.mjs";
+import QuestionType from "./questiontype.mjs";
 
 // References
 let choiceField = document.getElementById("choice-set");
@@ -29,7 +29,7 @@ function loadQuestions() {
     title.textContent = "Congratulations!"
 
     let newText = document.createElement("p");
-    newText.textContent = "Your murder method is: " + data.method;
+    newText.textContent = data.method;
     choiceField.insertBefore(newText, enterButton);
 
     enterData(data)
