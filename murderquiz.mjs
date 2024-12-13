@@ -41,8 +41,8 @@ export default class MurderQuiz {
         text: "Slowly",
         img: "",
         action: () => {
-          this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
-          this.methods.set("strangle", (this.methods.get("strangle") || 0) + 1);
+          this.methods.set("poison", (this.methods.get("poison") || 0) + 3.00009);
+          this.methods.set("strangle", (this.methods.get("strangle") || 0) + 3.001);
         }
       },
       {
@@ -50,11 +50,12 @@ export default class MurderQuiz {
         text: "Quickly",
         img: "",
         action: () => {
-          this.methods.set("axe", (this.methods.get("axe") || 0) + 1);
+          this.methods.set("axe", (this.methods.get("axe") || 0) + 1.00006);
           this.methods.set("dynamite", (this.methods.get("dynamite") || 0) + 1);
           this.methods.set("sword", (this.methods.get("sword") || 0) + 1);
-          this.methods.set("knife", (this.methods.get("knife") || 0) + 1);
-          this.methods.set("gun", (this.methods.get("gun") || 0) + 1);
+          this.methods.set("knife", (this.methods.get("knife") || 0) + 1.65);
+          this.methods.set("gun", (this.methods.get("gun") || 0) + 2.004);
+          this.methods.set("poison", (this.methods.get("poison") || 0) - 2);
         }
       }
     ]
@@ -67,7 +68,7 @@ export default class MurderQuiz {
         text: "In person",
         img: "",
         action: () => {
-          this.methods.set("strangle", (this.methods.get("strangle") || 0) + 1);
+          this.methods.set("strangle", (this.methods.get("strangle") || 0) + 1.923);
           this.methods.set("axe", (this.methods.get("axe") || 0) + 1);
           this.methods.set("sword", (this.methods.get("sword") || 0) + 1);
         }
@@ -78,7 +79,7 @@ export default class MurderQuiz {
         img: "",
         action: () => {
           this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
-          this.methods.set("dynamite", (this.methods.get("dynamite") || 0) + 1);
+          this.methods.set("dynamite", (this.methods.get("dynamite") || 0) + 1.0008);
           this.methods.set("knife", (this.methods.get("knife") || 0) + 1);
           this.methods.set("gun", (this.methods.get("gun") || 0) + 1);
         }
@@ -93,7 +94,7 @@ export default class MurderQuiz {
         text: "Yes",
         img: "",
         action: () => {
-          this.methods.set("axe", (this.methods.get("axe") || 0) + 1);
+          this.methods.set("axe", (this.methods.get("axe") || 0) + 2);
           this.methods.set("dynamite", (this.methods.get("dynamite") || 0) + 1);
         }
       },
@@ -105,7 +106,7 @@ export default class MurderQuiz {
           this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
           this.methods.set("strangle", (this.methods.get("strangle") || 0) + 1);
           this.methods.set("sword", (this.methods.get("sword") || 0) + 1);
-          this.methods.set("knife", (this.methods.get("knife") || 0) + 1);
+          this.methods.set("knife", (this.methods.get("knife") || 0) + 1.0202);
           this.methods.set("gun", (this.methods.get("gun") || 0) + 1);
         }
       }
@@ -119,8 +120,8 @@ export default class MurderQuiz {
         text: "Cats",
         img: "",
         action: () => {
-          this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
-          this.methods.set("strangle", (this.methods.get("strangle") || 0) + 1);
+          this.methods.set("poison", (this.methods.get("poison") || 0) + 2);
+          this.methods.set("strangle", (this.methods.get("strangle") || 0) + 3);
           this.methods.set("knife", (this.methods.get("knife") || 0) + 1);
         }
       },
@@ -131,7 +132,7 @@ export default class MurderQuiz {
         action: () => {
           this.methods.set("axe", (this.methods.get("axe") || 0) + 1);
           this.methods.set("dynamite", (this.methods.get("dynamite") || 0) + 1);
-          this.methods.set("sword", (this.methods.get("sword") || 0) + 1);
+          this.methods.set("sword", (this.methods.get("sword") || 0) + 5);
           this.methods.set("gun", (this.methods.get("gun") || 0) + 1);
         }
       }
@@ -145,8 +146,8 @@ export default class MurderQuiz {
         text: "Yes",
         img: "",
         action: () => {
-          this.methods.set("axe", (this.methods.get("axe") || 0) + 1);
-          this.methods.set("dynamite", (this.methods.get("dynamite") || 0) + 1);
+          this.methods.set("axe", (this.methods.get("axe") || 0) + 5.12);
+          this.methods.set("dynamite", (this.methods.get("dynamite") || 0) + 3);
         }
       },
       {
@@ -182,9 +183,9 @@ export default class MurderQuiz {
         text: "Style",
         img: "",
         action: () => {
-          this.methods.set("axe", (this.methods.get("axe") || 0) + 1);
-          this.methods.set("dynamite", (this.methods.get("dynamite") || 0) + 1);
-          this.methods.set("sword", (this.methods.get("sword") || 0) + 1);
+          this.methods.set("axe", (this.methods.get("axe") || 0) + 2);
+          this.methods.set("dynamite", (this.methods.get("dynamite") || 0) + 2);
+          this.methods.set("sword", (this.methods.get("sword") || 0) + 5);
         }
       }
     ]
@@ -197,7 +198,7 @@ export default class MurderQuiz {
         text: "Honor is one of the highest values",
         img: "",
         action: () => {
-          this.methods.set("sword", (this.methods.get("sword") || 0) + 1);
+          this.methods.set("sword", (this.methods.get("sword") || 0) + 7.1);
         }
       },
       {
@@ -208,7 +209,7 @@ export default class MurderQuiz {
           this.methods.set("strangle", (this.methods.get("strangle") || 0) + 1);
           this.methods.set("axe", (this.methods.get("axe") || 0) + 1);
           this.methods.set("dynamite", (this.methods.get("dynamite") || 0) + 1);
-          this.methods.set("sword", (this.methods.get("sword") || 0) + 1);
+          this.methods.set("sword", (this.methods.get("sword") || 0) - 1);
           this.methods.set("gun", (this.methods.get("gun") || 0) + 1);
         }
       },
@@ -219,6 +220,7 @@ export default class MurderQuiz {
         action: () => {
           this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
           this.methods.set("knife", (this.methods.get("knife") || 0) + 1);
+          this.methods.set("sword", (this.methods.get("sword") || 0) - 20);
         }
       }
     ]
@@ -231,7 +233,7 @@ export default class MurderQuiz {
         text: "Yes",
         img: "",
         action: () => {
-          this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
+          this.methods.set("poison", (this.methods.get("poison") || 0) + 1.0001);
         }
       },
       {
@@ -257,8 +259,8 @@ export default class MurderQuiz {
         text: "Noise is just fine, quiet places are usually boring",
         img: "",
         action: () => {
-          this.methods.set("dynamite", (this.methods.get("dynamite") || 0) + 1);
-          this.methods.set("gun", (this.methods.get("gun") || 0) + 1);
+          this.methods.set("dynamite", (this.methods.get("dynamite") || 0) + 6.09);
+          this.methods.set("gun", (this.methods.get("gun") || 0) + 2);
         }
       },
       {
@@ -278,6 +280,8 @@ export default class MurderQuiz {
           this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
           this.methods.set("strangle", (this.methods.get("strangle") || 0) + 1);
           this.methods.set("knife", (this.methods.get("knife") || 0) + 1);
+          this.methods.set("dynamite", (this.methods.get("dynamite") || 0) - 5);
+          this.methods.set("gun", (this.methods.get("gun") || 0) - 2);
         }
       }
     ]
@@ -301,9 +305,9 @@ export default class MurderQuiz {
         text: "Strategy",
         img: "",
         action: () => {
-          this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
-          this.methods.set("gun", (this.methods.get("gun") || 0) + 1);
-          this.methods.set("knife", (this.methods.get("knife") || 0) + 1);
+          this.methods.set("poison", (this.methods.get("poison") || 0) + 3);
+          this.methods.set("gun", (this.methods.get("gun") || 0) + 2);
+          this.methods.set("knife", (this.methods.get("knife") || 0) + 2);
         }
       }
     ]
@@ -316,9 +320,9 @@ export default class MurderQuiz {
         text: "I'd love to be famous",
         img: "",
         action: () => {
-          this.methods.set("axe", (this.methods.get("axe") || 0) + 1);
-          this.methods.set("dynamite", (this.methods.get("dynamite") || 0) + 1);
-          this.methods.set("sword", (this.methods.get("sword") || 0) + 1);
+          this.methods.set("axe", (this.methods.get("axe") || 0) + 3);
+          this.methods.set("dynamite", (this.methods.get("dynamite") || 0) + 3);
+          this.methods.set("sword", (this.methods.get("sword") || 0) + 3);
         }
       },
       {
@@ -335,7 +339,7 @@ export default class MurderQuiz {
         img: "",
         action: () => {
           this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
-          this.methods.set("strangle", (this.methods.get("strangle") || 0) + 1);
+          this.methods.set("strangle", (this.methods.get("strangle") || 0) + 1.234);
           this.methods.set("knife", (this.methods.get("knife") || 0) + 1);
         }
       }
@@ -349,8 +353,10 @@ export default class MurderQuiz {
         text: "Usually take risks",
         img: "",
         action: () => {
-          this.methods.set("axe", (this.methods.get("axe") || 0) + 1);
+          this.methods.set("axe", (this.methods.get("axe") || 0) + 1.002);
           this.methods.set("sword", (this.methods.get("sword") || 0) + 1);
+          this.methods.set("poison", (this.methods.get("poison") || 0) - 3);
+          this.methods.set("knife", (this.methods.get("knife") || 0) - 2);
         }
       },
       {
@@ -359,8 +365,7 @@ export default class MurderQuiz {
         img: "",
         action: () => {
           this.methods.set("strangle", (this.methods.get("strangle") || 0) + 1);
-          this.methods.set("dynamite", (this.methods.get("dynamite") || 0) + 1);
-          this.methods.set("knife", (this.methods.get("knife") || 0) + 1);
+          this.methods.set("dynamite", (this.methods.get("dynamite") || 0) + 1.0005);
         }
       },
       {
@@ -368,7 +373,8 @@ export default class MurderQuiz {
         text: "Generally avoid risk",
         img: "",
         action: () => {
-          this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
+          this.methods.set("poison", (this.methods.get("poison") || 0) + 3);
+          this.methods.set("knife", (this.methods.get("knife") || 0) + 2);
           this.methods.set("gun", (this.methods.get("gun") || 0) + 1);
         }
       }
@@ -382,8 +388,8 @@ export default class MurderQuiz {
         text: "Grace",
         img: "",
         action: () => {
-          this.methods.set("sword", (this.methods.get("sword") || 0) + 1);
-          this.methods.set("strangle", (this.methods.get("strangle") || 0) + 1);
+          this.methods.set("sword", (this.methods.get("sword") || 0) + 2.0604);
+          this.methods.set("strangle", (this.methods.get("strangle") || 0) + 4.0004);
           this.methods.set("gun", (this.methods.get("gun") || 0) + 1);
         }
       },
@@ -393,7 +399,7 @@ export default class MurderQuiz {
         img: "",
         action: () => {
           this.methods.set("poison", (this.methods.get("poison") || 0) + 1);
-          this.methods.set("axe", (this.methods.get("axe") || 0) + 1);
+          this.methods.set("axe", (this.methods.get("axe") || 0) + 1.40202);
           this.methods.set("dynamite", (this.methods.get("dynamite") || 0) + 1);
           this.methods.set("knife", (this.methods.get("knife") || 0) + 1);
         }
@@ -423,16 +429,24 @@ export default class MurderQuiz {
     if (finalValue == "axe") {
       returnVal += "Axe murder! You have a fondness for tradition. You love inspiring terror, and you aren't afraid to cause a little chaos. You also probably like pineapple.";
     }
-    if (finalValue == "axe") {
+    if (finalValue == "dynamite") {
       returnVal += "Dynamite! You're the kind of person who likes to put on a show. You go for complete victory, and probably walk away from explosions without looking back.";
     }
     if (finalValue == "sword") {
-      returnVal += "Killing with a sword! You probably like ";
+      returnVal += "Killing with a sword! You probably believe in slaying with style. You probably fancy yourself a knight.";
+    }
+    if (finalValue == "knife") {
+      returnVal += "A knife in the back! You love the look of shock and betrayal as you stab someone in the back. You aren't afraid to get up close and personal, and get your hands dirty.";
+    }
+    if (finalValue == "gun") {
+      returnVal += "A knife in the back! You love the look of shock and betrayal as you stab someone in the back. You aren't afraid to get up close and personal, getting your hands dirty.";
+    }
+    if (finalValue == "strangle") {
+      returnVal += "Strangling! You love the feel of your hands around your victim's neck. When you kill, it's personal. You also prefer to keep things neat and bloodless.";
     }
 
-    return this.methods;
-
     return {
+      name: this.name,
       method: finalValue
     }
   }
