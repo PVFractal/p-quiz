@@ -34,6 +34,25 @@ export default class MurderQuiz {
     ]
   },
   {
+    title: "Do you like liquorice?",
+    questions: [
+      {
+        type: QuestionType.REGULAR,
+        text: "Yes",
+        img: "",
+        action: () => {
+        }
+      },
+      {
+        type: QuestionType.REGULAR,
+        text: "No",
+        img: "",
+        action: () => {
+        }
+      }
+    ]
+  },
+  {
     title: "How do you generally prefer to enjoy things?",
     questions: [
       {
@@ -82,6 +101,25 @@ export default class MurderQuiz {
           this.methods.set("dynamite", (this.methods.get("dynamite") || 0) + 1.0008);
           this.methods.set("knife", (this.methods.get("knife") || 0) + 1);
           this.methods.set("gun", (this.methods.get("gun") || 0) + 1);
+        }
+      }
+    ]
+  },
+  {
+    title: "Would you ever try a fruit you have never tried before?",
+    questions: [
+      {
+        type: QuestionType.REGULAR,
+        text: "Yes",
+        img: "",
+        action: () => {
+        }
+      },
+      {
+        type: QuestionType.REGULAR,
+        text: "No",
+        img: "",
+        action: () => {
         }
       }
     ]
@@ -139,6 +177,25 @@ export default class MurderQuiz {
     ]
   },
   {
+    title: "Would you rather be too cold or too warm?",
+    questions: [
+      {
+        type: QuestionType.REGULAR,
+        text: "Too cold",
+        img: "",
+        action: () => {
+        }
+      },
+      {
+        type: QuestionType.REGULAR,
+        text: "Too warm",
+        img: "",
+        action: () => {
+        }
+      }
+    ]
+  },
+  {
     title: "Do you often do things to get a reaction out of people?",
     questions: [
       {
@@ -186,6 +243,32 @@ export default class MurderQuiz {
           this.methods.set("axe", (this.methods.get("axe") || 0) + 2);
           this.methods.set("dynamite", (this.methods.get("dynamite") || 0) + 2);
           this.methods.set("sword", (this.methods.get("sword") || 0) + 5);
+        }
+      }
+    ]
+  },
+  {
+    title: "Do you like panettone?",
+    questions: [
+      {
+        type: QuestionType.REGULAR,
+        text: "Love it",
+        img: "",
+        action: () => {
+        }
+      },
+      {
+        type: QuestionType.REGULAR,
+        text: "Don't know what it is/don't care",
+        img: "",
+        action: () => {
+        }
+      },
+      {
+        type: QuestionType.REGULAR,
+        text: "Don't like it",
+        img: "",
+        action: () => {
         }
       }
     ]
@@ -252,6 +335,25 @@ export default class MurderQuiz {
     ]
   },
   {
+    title: "What kind of fire is your favorite?",
+    questions: [
+      {
+        type: QuestionType.REGULAR,
+        text: "Orange",
+        img: "",
+        action: () => {
+        }
+      },
+      {
+        type: QuestionType.REGULAR,
+        text: "Blue",
+        img: "",
+        action: () => {
+        }
+      }
+    ]
+  },
+  {
     title: "What do you think of noise?",
     questions: [
       {
@@ -308,6 +410,25 @@ export default class MurderQuiz {
           this.methods.set("poison", (this.methods.get("poison") || 0) + 3);
           this.methods.set("gun", (this.methods.get("gun") || 0) + 2);
           this.methods.set("knife", (this.methods.get("knife") || 0) + 2);
+        }
+      }
+    ]
+  },
+  {
+    title: "How many fingers are ideally on one of your hands?",
+    questions: [
+      {
+        type: QuestionType.REGULAR,
+        text: "Five",
+        img: "",
+        action: () => {
+        }
+      },
+      {
+        type: QuestionType.REGULAR,
+        text: "Other",
+        img: "",
+        action: () => {
         }
       }
     ]
@@ -381,6 +502,25 @@ export default class MurderQuiz {
     ]
   },
   {
+    title: "If you were an ant, would you prefer bread crumbs or fruit bits?",
+    questions: [
+      {
+        type: QuestionType.REGULAR,
+        text: "Bread crumbs",
+        img: "",
+        action: () => {
+        }
+      },
+      {
+        type: QuestionType.REGULAR,
+        text: "Fruit bits",
+        img: "",
+        action: () => {
+        }
+      }
+    ]
+  },
+  {
     title: "Do you strive for grace or strength when accomplishing a task?",
     questions: [
       {
@@ -402,6 +542,25 @@ export default class MurderQuiz {
           this.methods.set("axe", (this.methods.get("axe") || 0) + 1.40202);
           this.methods.set("dynamite", (this.methods.get("dynamite") || 0) + 1);
           this.methods.set("knife", (this.methods.get("knife") || 0) + 1);
+        }
+      }
+    ]
+  },
+  {
+    title: "Which of these colors is happier to you?",
+    questions: [
+      {
+        type: QuestionType.REGULAR,
+        text: "Purple",
+        img: "",
+        action: () => {
+        }
+      },
+      {
+        type: QuestionType.REGULAR,
+        text: "Blue",
+        img: "",
+        action: () => {
         }
       }
     ]
@@ -447,7 +606,8 @@ export default class MurderQuiz {
 
     return {
       name: this.name,
-      method: finalValue
+      method: returnVal,
+      short: finalValue
     }
   }
 

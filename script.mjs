@@ -32,7 +32,12 @@ function loadQuestions() {
     newText.textContent = data.method;
     choiceField.insertBefore(newText, enterButton);
 
-    enterData(data)
+    let newData = {
+      method: data.short,
+      name: data.name
+    }
+
+    enterData(newData)
     return;
   }
 
