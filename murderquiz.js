@@ -473,7 +473,9 @@ export default class MurderQuiz {
     let sortedMap = []
     this.methods.forEach((value, key) => {
       let newArr = [key, value];
+      console.log(key);
       sortedMap.push(newArr);
+      console.log(newArr);
     });
 
     // const sortedMap = Array.from(this.methods.entries()); //.sort((a, b) => b[1] - a[1]);
