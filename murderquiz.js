@@ -472,7 +472,7 @@ export default class MurderQuiz {
 
     let sortedMap = []
 
-    for (let [key, value] of newMap) {
+    for (let [key, value] of this.methods) {
       console.log(key + " is " + value);
     }
 
